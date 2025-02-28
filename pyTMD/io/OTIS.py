@@ -598,10 +598,10 @@ def read_constants(
     dy = yi[1] - yi[0]
 
     # run wrapper function to convert coordinate systems
-    crs = pyTMD.crs().get(projection)
+    # crs = pyTMD.crs().get(projection) # original code with error
+    crs = pyTMD.crs.crs().get(projection) # Hung, 28 Feb 25
     # if global: extend limits
     is_geographic = crs.is_geographic
-    is_global = False
 
     # crop mask and bathymetry data to (buffered) bounds
     # or adjust longitudinal convention to fit tide model
@@ -614,6 +614,7 @@ def read_constants(
             buffer=kwargs['buffer'], is_geographic=is_geographic)
 
     # replace original values with extend arrays/matrices
+    is_global = False
     if ((xi[-1] - xi[0]) == (360.0 - dx)) & is_geographic:
         xi = _extend_array(xi, dx)
         # set global grid flag

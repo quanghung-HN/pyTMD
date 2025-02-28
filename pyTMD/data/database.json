@@ -359,6 +359,18 @@
             ],
             "version": "v2"
         },
+        "TPXO10-v2": {
+            "format": "OTIS",
+            "grid_file": "TPXO10_v2/grid_tpxo10",
+            "model_file": "TPXO10_v2/u_tpxo10.v2",
+            "name": "TPXO10-v2",
+            "projection": "EPSG:4326",
+            "reference": "https://www.tpxo.net/global/tpxo10",
+            "scale": 0.001,
+            "type": "z",
+            "variable": "tide_ocean",
+            "version": "v2"
+        },
         "TPXO10-atlas-v2-nc": {
             "format": "ATLAS-netcdf",
             "grid_file": "TPXO10_atlas_v2/grid_tpxo10atlas_v2.nc",
@@ -1800,6 +1812,18 @@
             "name": "TPXO10-atlas-v2",
             "projection": "EPSG:4326",
             "reference": "https://www.tpxo.net/global/tpxo10-atlas",
+            "scale": 0.001,
+            "type": "z",
+            "variable": "tide_ocean",
+            "version": "v2"
+        },
+        "TPXO10-v2": {
+            "format": "OTIS",
+            "grid_file": "TPXO10_v2/grid_tpxo10",
+            "model_file": "TPXO10_v2/h_tpxo10.v2",
+            "name": "TPXO10-v2",
+            "projection": "EPSG:4326",
+            "reference": "https://www.tpxo.net/global/tpxo10",
             "scale": 0.001,
             "type": "z",
             "variable": "tide_ocean",
